@@ -9,7 +9,7 @@
 - [日记 Diary](diary/)
 - [数学 Math](math/)
 - [编程 Code](code/)
-- [思考 Reflection](thought/)
+- [思考 Reflection](reflection/)
 
 ---
 

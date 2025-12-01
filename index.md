@@ -1,18 +1,15 @@
-## Gianni's Home
-
-这里记录我作为数学专业学生的日记、学习和思考。
-
+---
+layout: default
+title: 首页
 ---
 
-## 分类导航
+# 欢迎来到 Gianni 的博客
 
-- [日记 Diary](diary/)
-- [数学 Math](math/)
-- [编程 Code](code/)
-- [思考 Reflection](reflection/)
+这里记录我的日记、数学笔记、编程经验和一些思考。
 
----
+## 目录
 
-## 最近更新
-
-- 敬请期待……
+- [日记 Diary](/diary/)
+- [数学 Math](/math/)
+- [编程 Coding](/coding/)
+- [思考 Thought](/thought/)

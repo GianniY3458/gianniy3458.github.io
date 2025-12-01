@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 数学
-permalink: /math/
+title: 思考 Reflection
+permalink: /reflection/
 ---
-暂时没有内容哦
+## 暂时没有内容哦

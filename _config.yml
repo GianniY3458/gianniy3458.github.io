@@ -1,3 +1,9 @@
 theme: jekyll-theme-cayman
 title: Gianni's Blog
 description: math|code|thought|diary
+theme: jekyll-theme-cayman
+
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge

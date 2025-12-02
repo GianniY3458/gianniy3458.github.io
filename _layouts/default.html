@@ -7,6 +7,31 @@
 
     <!-- Cayman 默认样式 -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+
+    <style>
+      /* 目录样式美化 */
+      #markdown-toc {
+        padding: 0.75rem 1rem;
+        margin: 1.5rem 0;
+        border-radius: 6px;
+        border: 1px solid #e1e4e8;
+        background: #f6f8fa;
+        list-style-type: none;
+      }
+
+      #markdown-toc li {
+        margin: 0.2rem 0;
+      }
+
+      #markdown-toc li a {
+        text-decoration: none;
+      }
+
+      #markdown-toc li a:hover {
+        text-decoration: underline;
+     }
+    </style>
   </head>
 
   <body>

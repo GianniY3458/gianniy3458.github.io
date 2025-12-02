@@ -1,7 +1,7 @@
 ---
-layout: default
 title: 思考 Reflection
 permalink: /reflection/
+layout: default
 ---
 - [班级中的共性问题](2025-12-02-problems-in-class.md)
 - *未完待续...*

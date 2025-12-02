@@ -1,6 +1,6 @@
 ---
-layout: default
 title: 首页
+layout: default
 ---
 
 # welcome to my space！

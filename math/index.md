@@ -1,7 +1,7 @@
 ---
-layout: default
 title: 数学 Math
 permalink: /math/
+layout: default
 ---
 - ### 暂时没有内容哦
 

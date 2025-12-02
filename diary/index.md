@@ -1,7 +1,7 @@
 ---
-layout: default
 title: 日记 Diary
 permalink: /diary/
+layout: default
 ---
 - ### [2025年11月30日](2025-11-30.md)
 - ### [2025年12月01日](2025-12-01.md)

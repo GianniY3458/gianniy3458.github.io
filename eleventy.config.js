@@ -3,8 +3,6 @@ const markdownItAnchor = require("markdown-it-anchor");
 const markdownItToc = require("markdown-it-table-of-contents");
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.ignores.add("**/.gitmodel.md");
-
   eleventyConfig.addFilter("tocItems", function (content) {
     if (!content) {
       return [];

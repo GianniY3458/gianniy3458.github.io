@@ -29,26 +29,10 @@
     </section>
 
     <main class="main-content">
-      {% assign tocItems = content | tocItems %}
-      <div class="content-layout{% if tocItems.size == 0 %} no-toc{% endif %}">
-        {% if tocItems.size > 0 %}
-        <aside class="page-toc" aria-label="Table of contents">
-          <div class="page-toc-inner">
-            <p class="page-toc-title">目录</p>
-            <nav class="toc-nav">
-              {% for item in tocItems %}
-              <a class="toc-link toc-level-{{ item.level }}" href="#{{ item.id }}">{{ item.text }}</a>
-              {% endfor %}
-            </nav>
-          </div>
-        </aside>
-        {% endif %}
-
-        <article class="content-body">
-          {% render "mathjax.html" %}
-          {{ content }}
-        </article>
-      </div>
+      <article class="content-body">
+        {% render "mathjax.html" %}
+        {{ content }}
+      </article>
     </main>
 
     <footer class="site-footer">

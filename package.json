@@ -2,7 +2,7 @@
   "name": "gianni-blog",
   "version": "1.0.0",
   "private": true,
-  "description": "math|code|reflection|diary",
+  "description": "diary|math|code|reflection",
   "scripts": {
     "dev": "eleventy --serve",
     "build": "eleventy",

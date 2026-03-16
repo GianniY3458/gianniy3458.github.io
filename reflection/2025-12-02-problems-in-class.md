@@ -1,6 +1,6 @@
 ---
 title: 关于班级问题的思考
-permalink: /reflection/20251202
+permalink: /reflection/20251202/
 layout: default
 ---
 ## head1
@@ -11,4 +11,4 @@ text1
 
 text2
 
-[返回目录](index.md)
+[返回目录](/reflection/)

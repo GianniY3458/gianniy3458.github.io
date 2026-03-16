@@ -2,8 +2,15 @@
 title: 思考 Reflection
 permalink: /reflection/
 layout: default
+eleventyExcludeFromCollections: true
 ---
-- **[班级中的共性问题](2025-12-02-problems-in-class.md)**
+{%- if collections.reflection.size > 0 %}
+{%- for post in collections.reflection %}
+- **[{{ post.data.title }}]({{ post.url }})**
+{%- endfor %}
+{%- else %}
+- **暂时没有内容哦**
+{%- endif %}
 - ***未完待续...***
 
-[返回首页](../index.md)
+[返回首页](/)

@@ -2,13 +2,15 @@
 title: 日记 Diary
 permalink: /diary/
 layout: default
+eleventyExcludeFromCollections: true
 ---
-- **[2025年11月30日](2025-11-30.md)**
-- **[2025年12月01日](2025-12-01.md)**
-- **[2025年12月02日](2025-12-02.md)**
-- **[2025年12月03日](2025-12-03.md)**
-- **[2025年12月31日](2025-12-31.md)**
-- **[2025年末随笔](2025-12-31_2.md)**
+{%- if collections.diary.size > 0 %}
+{%- for post in collections.diary %}
+- **[{{ post.data.title }}]({{ post.url }})**
+{%- endfor %}
+{%- else %}
+- **暂时没有内容哦**
+{%- endif %}
 - ***未完待续...***
 
-[返回首页](../index.md)
+[返回首页](/)

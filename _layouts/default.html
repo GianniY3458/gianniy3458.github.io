@@ -1,35 +1,60 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: 'en-US' }}">
+<html lang="{{ site.lang | default: 'zh-CN' }}">
   <head>
     <meta charset="UTF-8">
-    <title>{{ page.title | default: site.title }}</title>
+    <title>{{ title | default: site.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Cayman 默认样式 -->
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <meta name="description" content="{{ site.description }}">
+    <link rel="stylesheet" href="/assets/css/style.css">
   </head>
 
   <body>
-    <section class="page-header">
-      <h1 class="project-name">{{ site.title }}</h1>
-      <h2 class="project-tagline">{{ site.description }}</h2>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="site-brand" href="/">{{ site.title }}</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="/diary/">Diary</a>
+          <a href="/math/">Math</a>
+          <a href="/code/">Code</a>
+          <a href="/reflection/">Reflection</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <p class="page-kicker">{{ site.description }}</p>
+        <h1 class="page-title">{{ title | default: site.title }}</h1>
+      </div>
     </section>
 
-    <section class="main-content">
+    <main class="main-content">
+      {% assign tocItems = content | tocItems %}
+      <div class="content-layout{% if tocItems.size == 0 %} no-toc{% endif %}">
+        {% if tocItems.size > 0 %}
+        <aside class="page-toc" aria-label="Table of contents">
+          <div class="page-toc-inner">
+            <p class="page-toc-title">目录</p>
+            <nav class="toc-nav">
+              {% for item in tocItems %}
+              <a class="toc-link toc-level-{{ item.level }}" href="#{{ item.id }}">{{ item.text }}</a>
+              {% endfor %}
+            </nav>
+          </div>
+        </aside>
+        {% endif %}
 
-      <!-- ★★ 在这里加载 MathJax（不会破坏任何主题结构） -->
-      {% include mathjax.html %}
+        <article class="content-body">
+          {% render "mathjax.html" %}
+          {{ content }}
+        </article>
+      </div>
+    </main>
 
-      {{ content }}
-
-      <footer class="site-footer">
-        <span class="site-footer-owner">
-          <a href="{{ site.github.repository_url }}">{{ site.title }}</a>
-          is maintained by
-          <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.
-        </span>
-      </footer>
-
-    </section>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        &copy; {{ "now" | date: "%Y" }} {{ site.title }}
+      </div>
+    </footer>
   </body>
 </html>
